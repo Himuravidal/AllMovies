@@ -1,2 +1,10 @@
 rootProject.name = "AllMovies"
-include ':app'
+include ':app:app'
+include ':popular:popular'
+include ':toprated:toprated'
+include ':upcoming:upcoming'
+include ':nowplaying:nowplaying'
+include ':details:details'
+include ':popular:data'
+include ':popular:domain'
+include ':toprated:data'

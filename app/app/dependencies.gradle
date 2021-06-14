@@ -1,0 +1,44 @@
+apply from: "../../libraries.gradle"
+
+dependencies {
+    // core
+    api "androidx.core:core-ktx:$versions.kotlinExt"
+    api "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin"
+    api "androidx.appcompat:appcompat:$versions.support"
+    api "androidx.fragment:fragment-ktx:$versions.fragmentExt"
+    api "com.google.android.material:material:$versions.material"
+    api "androidx.navigation:navigation-dynamic-features-fragment:$versions.navigation"
+    api "androidx.navigation:navigation-fragment-ktx:$versions.navigation"
+    api "androidx.navigation:navigation-ui-ktx:$versions.navigation"
+
+    //dagger
+    api "com.google.dagger:dagger:$versions.dagger"
+    api "com.google.dagger:dagger-android:$versions.dagger"
+
+    //hilt
+    api "com.google.dagger:hilt-android:$versions.hilt"
+    kapt "com.google.dagger:hilt-android-compiler:$versions.hilt"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$versions.hiltViewModel"
+    kapt "androidx.hilt:hilt-compiler:$versions.hiltViewModel"
+
+    //Retrofit
+    api "com.squareup.okhttp3:logging-interceptor:$versions.okHttp"
+    api "com.squareup.retrofit2:retrofit:$versions.retrofit"
+    api "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+
+    //Room
+    api "androidx.room:room-runtime:$versions.room"
+    api "androidx.room:room-ktx:$versions.room"
+    kapt "androidx.room:room-compiler:$versions.room"
+
+    //logs
+    implementation "com.jakewharton.timber:timber:$versions.timber"
+
+    //Test
+    //api project(":testutils")
+    testImplementation "androidx.arch.core:core-testing:$versions.coreTesting"
+    testImplementation "junit:junit:$versions.junit"
+    testImplementation "io.mockk:mockk:$versions.mockk"
+    testImplementation "com.google.truth:truth:$versions.truth"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.coroutines"
+}

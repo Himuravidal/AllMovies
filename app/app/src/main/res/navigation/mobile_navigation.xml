@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_popular">
+
+    <include-dynamic
+        android:id="@+id/nav_popular"
+        app:moduleName="popular"
+        app:graphResName="nav_popular"
+        app:graphPackage="${applicationId}.popular" />
+
+    <include-dynamic
+        android:id="@+id/nav_top_rated"
+        app:moduleName="topRated"
+        app:graphResName="nav_top_rated"
+        app:graphPackage="${applicationId}.toprated" />
+
+    <include-dynamic
+        android:id="@+id/navigation_now_playing"
+        app:moduleName="nowPlaying"
+        app:graphResName="nav_now_playing"
+        app:graphPackage="${applicationId}.nowPlaying" />
+
+    <include-dynamic
+        android:id="@+id/navigation_upcoming"
+        app:moduleName="upcoming"
+        app:graphResName="nav_upcoming"
+        app:graphPackage="${applicationId}.upcoming" />
+
+</navigation>
